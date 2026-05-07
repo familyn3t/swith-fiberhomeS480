@@ -1,0 +1,7 @@
+Username: admin
+Password: *****
+Fengine#conf 
+  %Enter configuration commands.End with Ctrl+Z or command "quit" & "end"
+Fengine(config)#
+Fengine(config)#vlan 2002
+Fengine(vlan-2002)#exit
