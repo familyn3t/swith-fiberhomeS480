@@ -5,3 +5,69 @@ Fengine#conf
 Fengine(config)#
 Fengine(config)#vlan 2002
 Fengine(vlan-2002)#exit
+
+#Panduan
+interface gigaethernet 1/0/2
+port link-type trunk
+port trunk allow-pass vlan 20,30,40
+
+#Hapus 
+no port trunk allow-pass vlan 20,30,40
+
+#config mode-access
+interface gigaethernet 1/0/2
+ port link-type access
+ port default vlan 20
+
+#simpan
+wr f >ENTER
+
+#all-config
+!
+vlan 1
+vlan 1108
+vlan 2002
+!
+interface vlan 1108
+ ip address 172.16.118.9/24
+!
+line console 1
+ length 24
+ timeout 10 0
+ login authentication local
+ language english
+ no color
+line vty 1 5
+ length 24
+ no monitor
+ timeout 10 0
+ login authentication local
+ language english
+ no color
+!
+!
+interface gigaethernet 1/0/1
+ port link-type trunk
+ port trunk allow-pass vlan 1108,2002
+!
+interface gigaethernet 1/0/2
+!
+interface gigaethernet 1/0/3
+!
+interface gigaethernet 1/0/4
+!        
+interface gigaethernet 1/0/5
+!
+interface gigaethernet 1/0/6
+!
+interface gigaethernet 1/0/7
+!
+interface gigaethernet 1/0/8
+ port link-type access
+ port default vlan 2002
+!
+interface gigaethernet 1/0/9
+!
+interface gigaethernet 1/0/10
+!
+!end
