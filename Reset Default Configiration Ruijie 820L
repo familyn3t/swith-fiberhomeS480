@@ -1,0 +1,5 @@
+Berikut adalah cara reset ke pengaturan pabrik, dengan commandline ssh/telnet/console ke AP Rujie
+delete flash:config.text
+
+Untuk restart 
+reload 
