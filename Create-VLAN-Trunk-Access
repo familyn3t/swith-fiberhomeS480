@@ -1,5 +1,5 @@
 Username: admin
-Password: *****
+Password: 12345
 Fengine#conf 
   %Enter configuration commands.End with Ctrl+Z or command "quit" & "end"
 Fengine(config)#
